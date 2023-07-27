@@ -4,4 +4,3 @@ calc: Calcular = Calcular(1)
 
 print(calc)
 
-# print(teste)
