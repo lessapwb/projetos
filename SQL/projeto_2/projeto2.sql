@@ -114,8 +114,6 @@ select
 	count(*) as "veículos visitas (#)"
 from classificacao_veiculos
 group by "classificação do veículo"
-
-
 -- (Query 6) Idade dos veículos visitados
 -- Colunas: Idade do veículo, veículos visitados (%), ordem
 
@@ -159,14 +157,12 @@ order by ordem
 -- (Query 7) Veículos mais visitados por marca
 -- Colunas: brand, model, visitas (#)
 
-
-
-
-
-
-
-
-
-
-
-
+select
+    pro.brand,
+    pro.model,
+    count(*) as "visitas (#)"
+from sales.funnel as fun
+left join sales.products as pro
+    on fun.product_id = pro.product_id
+group by pro.brand, pro.model
+order by pro.brand, pro.model, "visitas (#)"
