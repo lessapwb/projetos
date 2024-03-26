@@ -12,7 +12,8 @@ Repositório para armazenar resumos sobre Git e Github da [Digital Innovation On
 
 | Aulas | Resumos |
 |-------|---------|
-| Gravando Alterações no Repositório Local | [Resumos]()|
+| Aula 1| [Resumos]()|
+| Aula 2| [Resumos]()|
 
     git init
 
