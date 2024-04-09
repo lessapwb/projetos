@@ -1,31 +1,17 @@
-# TODO: Crie a Função para classificar um número como positivo, negativo ou zero
-def classificar_numero(numero):
-    if numero > 0:
-        return "positivo!"
-    elif numero < 0:
-        return "negativo!"
+# DICAS SOBRE PYTHON:
+# FUNÇÃO input(): Ela recebe como parâmetro uma String que será visível ao usuário, 
+# onde geralmente informa que tipo de informação ele está esperando receber;
+# FUNÇÃO print(): Ela é a responsável por imprimir os dados e informar os valores no terminal;
 
-def main():
-    positivos = 0
-    negativos = 0
-    
-    while True:
-        numero = int(input())
-        
-        if numero == 0:
-            break  # Encerra o loop se o usuário digitar 0.
-        
-        # Chama a função classificar_numero para imprimir a classificação do número
-        print(classificar_numero(numero))
-        
-        # TODO: Faça a verificação para saber quantos números positivos e negativos foram inseridos
-        if numero > 0:
-            positivos += 1
-        elif numero < 0:
-            negativos += 1
-    
-    # Imprime a quantidade de números positivos e negativos inseridos
-    print(f"{positivos} números positivos, {negativos} números negativos")
+# Abaixo segue um exemplo de código que você pode ou não utilizar
+segundos = int(input())
 
-if __name__ == "__main__":
-    main()
+# TODO: Complete os espaços em branco com as operações que calculam a duração em segundos.
+minutos = 
+segundos = int(segundos - (minutos * 60))
+horas = 
+minutos = 
+
+# DICA: O Método format() cria uma String que contém campos entre chaves que são 
+# substituídas pelos argumentos do format.
+print("{}:{}:{}".format(horas, minutos, segundos))
