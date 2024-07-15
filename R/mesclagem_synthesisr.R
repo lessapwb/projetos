@@ -9,7 +9,7 @@ library(synthesisr)
 library(openxlsx)
 
 # Definindo o diretório do trabalho
-setwd("C:/Users/patri/Downloads") # Coloque o caminho da pasta que você pretende usar
+setwd("C://Users//patri//OneDrive//Documentos//Artigos - 2024//6. Revisão Inteligência de Mercado - Artigo da Aula Teorias em Marketing//Base") # Coloque o caminho da pasta que você pretende usar
 
 # Carregando os dados da Scopus e Web of Science
 scopus <- read_ref(
@@ -19,7 +19,7 @@ scopus <- read_ref(
   verbose = FALSE
 )
 wos <- read_ref(
-  "savedrecs.bib",
+  "wos.bib",
   tag_naming = "best_guess",
   return_df = TRUE,
   verbose = FALSE

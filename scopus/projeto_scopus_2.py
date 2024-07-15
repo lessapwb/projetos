@@ -6,6 +6,19 @@ import os
 from dotenv import load_dotenv
 import warnings
 
+
+from langchain_community.document_loaders.csv_loader import CSVLoader
+
+file_path = (
+    "C:\programacao\projetos\scopus\base.csv"
+)
+
+loader = CSVLoader(file_path=file_path)
+data = loader.load()
+
+for record in data[:2]:
+    print(record)
+
 # Suprimir avisos de depreciação
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
@@ -13,7 +26,7 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 load_dotenv()
 
 # Acessar a chave da API do OpenAI
-openai_api_key = os.getenv('sk-proj-hNilou3jBHVjOg7PMGSbT3BlbkFJRQxI1IgJ322AasuUbIMo')
+openai_api_key = os.getenv('sk-proj-Wy4FWAf7hRtw1NGOaptRT3BlbkFJxPf8nUfXRMuj9xT2yIBu')
 
 agent = create_csv_agent(
     ChatOpenAI(temperature=0.9, model="gpt-4o"), #gpt-3.5-turbo-0125
